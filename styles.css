@@ -24,10 +24,12 @@ body {
   margin-inline: var(--size-7);
   background-image: var(--gradient-15);
   background-repeat: no-repeat;
-  min-height: 94dvh;
+  min-height: 97dvh;
 }
 
 button.bigbtn {
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-4);
   font-family: "Noto Sans Symbols 2", sans-serif;
   font-size: var(--font-size-fluid-1);
   &.impt {

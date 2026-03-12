@@ -10,39 +10,41 @@
     <script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.8/bundles/datastar.js"></script>
     <script src="https://kit.fontawesome.com/916df9b004.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body style="display:flex; flex-direction:column;">
 
-    <h1>My HTML Template</h1>
-    <div style="display: flex; gap: var(--size-6); align-items: center; ">
-      <p>The quick brown fox jumps over the lazy dog. 
-      <br>House in Tamil is: வீடு
-      <br>I can speak Chinese: 我会说中文
-      <br>My name is Loh Siu Yin: 我的名是罗修仁
-      </p>
+    <div style="flex-grow:1">
+      <h1>My HTML Template</h1>
+      <div style="display: flex; gap: var(--size-6); align-items: center; ">
+        <p>House in Tamil is: வீடு
+        <br>I can speak Chinese: 我会说中文
+        <br>My name is Loh Siu Yin: 我的名是罗修仁
+        </p>
 
-      <!-- <p id="gerbau" class="spinner spin"></p> -->
-    </div>
+      </div>
 
-    <div id="spinner_div" style="display: flex; gap: var(--size-6); align-items: center; ">
+      <div id="spinner_div" style="display: flex; gap: var(--size-6); align-items: center; ">
+        <div>
+          <p style="margin-bottom:0;">The quick brown fox jumps over the lazy dog:</p>
+          <div style="display:flex; gap: var(--size-6);" data-signals:jumping=false>
+            <button class="bigbtn" data-on:click="$jumping=true; jumping($jumping)" data-attr:disabled="$jumping">Start jumping</button>
+            <button class="bigbtn impt" data-on:click="$jumping=false; jumping($jumping)" data-attr:disabled="!$jumping">Stop jumping</button>
+          </div>
+
+          <div style="margin-top: var(--size-4); display:flex; gap: var(--size-6);" data-signals:spin=false >
+            <button class="bigbtn" data-on:click="$spin=true; spin($spin)" data-attr:disabled="$spin">Start spinning</button>
+            <button class="bigbtn impt" data-on:click="$spin=false; spin($spin)" data-attr:disabled="!$spin">Stop spinning</button>
+          </div>
+
+        </div>
+      </div>
+
       <div>
-        <p style="margin-bottom:0;">The quick brown fox jumps over the lazy dog:</p>
-        <div style="display:flex; gap: var(--size-6);" data-signals:jumping=false>
-          <button class="bigbtn" data-on:click="$jumping=true; jumping($jumping)" data-attr:disabled="$jumping">Start jumping</button>
-          <button class="bigbtn impt" data-on:click="$jumping=false; jumping($jumping)" data-attr:disabled="!$jumping">Stop jumping</button>
-        </div>
-
-        <div style="margin-top: var(--size-4); display:flex; gap: var(--size-6);" data-signals:spin=false >
-          <button class="bigbtn" data-on:click="$spin=true; spin($spin)" data-attr:disabled="$spin">Start spinning</button>
-          <button class="bigbtn impt" data-on:click="$spin=false; spin($spin)" data-attr:disabled="!$spin">Stop spinning</button>
-        </div>
-
-      <!-- <div id="jumping_indicator" style="display:none" data-show="$jumping"><img src="fox_489994.png" width="48px"></div>
-      -->
+        <div id="jumping_indicator" style="margin-top: var(--size-4); display:none" data-show="$jumping"><img src="fox.png" width="128px" ></div>
+        <div id="spinning_indicator" style="margin-top: var(--size-4); display:none" data-show="$spin"></div>
+      </div>
     </div>
-    <div id="jumping_indicator" style="margin-top: var(--size-4); display:none" data-show="$jumping"><img src="fox.png" width="128px" ></div>
-    <div id="spinning_indicator" style="margin-top: var(--size-4); display:none" data-show="$spin"></div>
 
-    <footer style="margin-top: var(--size-12); font-size: var(--font-size-0)">
+    <footer style="font-size: var(--font-size-0)">
       <a href="https://www.flaticon.com/free-icons/cute" title="cute icons">Cute icons created by Merchadew - Flaticon</a>
     </footer>
   </body>
