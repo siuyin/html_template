@@ -31,9 +31,11 @@ button.bigbtn {
   font-family: "Noto Sans Symbols 2", sans-serif;
   font-size: var(--font-size-fluid-1);
   &.impt {
-    color: var(--pink-8);
+    color: var(--red-8);
+    border-color: var(--red-3);
     &[disabled] {
-      color: var(--gray-1);
+      color: var(--gray-6);
+      border-color: var(--gray-5);
     }
   }
 }
