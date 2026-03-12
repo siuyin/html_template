@@ -1,0 +1,71 @@
+@import "https://unpkg.com/open-props";
+
+@font-face {
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+}
+
+@font-face {
+  font-family: "Noto Sans Symbols 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+}
+
+body {
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-size: var(--font-size-fluid-1);
+  margin-inline: var(--size-7);
+  background-image: var(--gradient-15);
+  background-repeat: no-repeat;
+  min-height: 94dvh;
+}
+
+button.bigbtn {
+  font-family: "Noto Sans Symbols 2", sans-serif;
+  font-size: var(--font-size-fluid-1);
+  &.impt {
+    color: var(--pink-8);
+    &[disabled] {
+      color: var(--gray-1);
+    }
+  }
+}
+
+.spinner {
+  background-color: var(--violet-10);
+  border: var(--size-0) solid var(--violet-3);
+  //width: var(--size-8);
+  //height: var(--size-2);
+  width: 64px;
+  height: 64px;
+  animation: var(--animation-spin);
+  animation-duration: 1.5s;
+}
+
+.spinner_round_old {
+  border: var(--size-2) solid var(--violet-0);
+  border-radius: var(--radius-round);
+  border-top: var(--size-2) solid var(--violet-10);
+  width: var(--size-7);
+  height: var(--size-7);
+  animation: var(--animation-spin);
+  animation-duration: 1.2s;
+  aspect-ratio: var(--ratio-square);
+}
+
+.spinner_round {
+  font-size: var(--size-9);
+  width: var(--size-7);
+  height: var(--size-7);
+  animation: var(--animation-slide-in-down) alternate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  aspect-ratio: var(--ratio-square);
+}
