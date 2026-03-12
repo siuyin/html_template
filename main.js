@@ -1,5 +1,15 @@
-function spin_round(bool) {
+function jumping(bool) {
   const sp = document.getElementById("jumping_indicator");
+  if (bool == true) {
+    sp.classList.add("jumping");
+    return;
+  }
+
+  sp.classList.remove("jumping");
+}
+
+function spin(bool) {
+  const sp = document.getElementById("spinning_indicator");
   if (bool == true) {
     sp.classList.add("spinner_round");
     return;
@@ -7,3 +17,5 @@ function spin_round(bool) {
 
   sp.classList.remove("spinner_round");
 }
+
+

@@ -57,7 +57,7 @@ button.bigbtn {
   animation-duration: 1.5s;
 }
 
-.spinner_round_old {
+.spinner_round {
   border: var(--size-2) solid var(--violet-0);
   border-radius: var(--radius-round);
   border-top: var(--size-2) solid var(--violet-10);
@@ -68,7 +68,7 @@ button.bigbtn {
   aspect-ratio: var(--ratio-square);
 }
 
-.spinner_round {
+.jumping {
   font-size: var(--size-9);
   width: var(--size-7);
   height: var(--size-7);
