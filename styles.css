@@ -32,9 +32,11 @@ button.bigbtn {
   font-size: var(--font-size-fluid-1);
   &.impt {
     color: var(--red-8);
+    background-color: var(--red-2);
     border-color: var(--red-3);
     &[disabled] {
       color: var(--gray-6);
+      background-color: var(--gray-2);
       border-color: var(--gray-5);
     }
   }
