@@ -39,7 +39,7 @@ button.bigbtn {
       background-color: var(--gray-2);
       border-color: var(--gray-5);
     }
-    &:hover {
+    &:not(:disabled):hover {
      color: var(--red-0);
      background-color: var(--red-6);
     }
