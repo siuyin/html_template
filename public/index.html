@@ -43,9 +43,11 @@
       <div>
         <div id="jumping_indicator" style="margin-top: var(--size-4); display:none" data-show="$jumping"><img src="fox.png" width="128px" ></div>
         <div id="spinning_indicator" style="margin-top: var(--size-4); display:none" data-show="$spin"></div>
+        <div id="time"></div>
       </div>
     </div>
 
+    <div data-init="@get('/time')"></div>
     <footer style="margin-top: var(--size-2); font-size: var(--font-size-0)">
       <a href="https://www.flaticon.com/free-icons/cute" title="cute icons">Cute icons created by Merchadew - Flaticon</a>
     </footer>
